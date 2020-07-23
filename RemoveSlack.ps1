@@ -6,12 +6,14 @@ Read-Host -Prompt "Press Enter to remove all Slack files from all users"
 Read-Host -Prompt "ARE YOU SURE?? (Enter to continue)"
 
 If(Test-Path -Path "C:\Program Files\Slack"){
-    Remove-Item -path "C:\Program Files\Slack" -recuse
+    Remove-Item -path "C:\Program Files\Slack" -recurse
+    Write-Host "C:\Program Files\Slack was removed"
     } Else{
     Write-Host "C:\Program Files\Slack was not found"
     }
 If(Test-Path -Path "C:\Program Files\Slack"){
-    Remove-Item -path "C:\Program Files\Slack Deployment" -recuse
+    Remove-Item -path "C:\Program Files\Slack Deployment" -recurse
+    Write-Host "C:\Program Files\Slack Deployment was removed"
     } Else{
     Write-Host "C:\Program Files\Slack Deployment was not found"
     }
