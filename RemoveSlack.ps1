@@ -23,12 +23,12 @@ $path2 = "C:\Users\" + $folder.Name + "\AppData\Roaming\Slack"
 
 If (Test-Path -Path $path1) {
     Remove-Item –path $path1 –recurse
-    Write-Host $path2 "was removed"
+    Write-Host $path1 "was removed"
     }Else {
-    Write-Host $path2 "was not found"
+    Write-Host $path1 "was not found"
     }
 
-If (Test-Path -Path $path1) {
+If (Test-Path -Path $path2) {
     Remove-Item –path $path2 –recurse
     Write-Host $path2 "was removed"
     } Else {
