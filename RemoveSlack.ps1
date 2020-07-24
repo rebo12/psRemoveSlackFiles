@@ -31,14 +31,12 @@ foreach ($folder in $folderS) {
 $path[0] = "C:\Users\" + $folder.Name + "\AppData\Local\Slack"
 $path[1] = "C:\Users\" + $folder.Name + "\AppData\Local\Microsoft\Teams*"
 $path[2] = "C:\Users\" + $folder.Name + "\AppData\Local\SquirrelTemp"
-$path[3] = "C:\Users\" + $folder.Name + "\AppData\Local\Temp"
-$path[4] = "C:\Users\" + $folder.Name + "\AppData\Local\Microsoft\Teams*"
-$path[5] = "C:\Users\" + $folder.Name + "\AppData\Roaming\Microsoft\Teams"
-$path[6] = "C:\Users\" + $folder.Name + "\AppData\Roaming\Microsoft Teams"
-$path[5] = "C:\Users\" + $folder.Name + "\Desktop\Slack"
+$path[3] = "C:\Users\" + $folder.Name + "\AppData\Local\Microsoft\Teams*"
+$path[4] = "C:\Users\" + $folder.Name + "\AppData\Roaming\Microsoft\Teams"
+$path[5] = "C:\Users\" + $folder.Name + "\AppData\Roaming\Microsoft Teams"
+$path[6] = "C:\Users\" + $folder.Name + "\Desktop\Slack"
 
-
-For($i = 0; $i < 3; $i ++) {
+For($i = 0; $i -le 3; $i ++) {
     If (Test-Path -Path $path[$i]) {
         Remove-Item –path $path[$i] –recurse
         Write-Host $path[$i] "was removed"
