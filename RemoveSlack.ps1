@@ -1,6 +1,4 @@
 # Reggie Scerbo - rscerbo@databridgesites.com - 7/23/20
-# Remove Slack directories from all users on a PC
-# Uncomment all commented lines from the body of the script before running
 
 Read-Host -Prompt "Press Enter to remove all Slack and MSTeams files from all users"
 
